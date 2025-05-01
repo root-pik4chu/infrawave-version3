@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import GridDistortion from "../../../ExperimentData/GridDistortion";
-import Image from 'next/image';
+import Image from "next/image";
 
 // import ScrollGradientText from "../components/ScrollGradientText";
 // import Lines from "../components/Lines";
@@ -72,19 +72,19 @@ const HomePage = () => {
           {/* Top section */}
           <div className="w-full h-[85vh]">
             <div className="w-full h-full flex items-srart justify-between flex-col px-[1vw]  ">
-            {/* pt-[27vw] */}
+              {/* pt-[27vw] */}
               <div className="w-full ">
-            <div className="w-full h-[55vh] pt-[2vw]">
-              {/* <h1 className="pt-[2vw]" style={{fontSize:"18.5vw", color: "fff"}}>INfrawave</h1> */}
-              <GridDistortion
-    imageSrc="./Frame 99.svg"
-    grid={20}
-    mouse={0.1}
-    strength={0.15}
-    relaxation={0.9}
-    className="custom-class"
-  />
-            </div>
+                <div className="w-full h-[55vh] pt-[2vw]">
+                  {/* <h1 className="pt-[2vw]" style={{fontSize:"18.5vw", color: "fff"}}>INfrawave</h1> */}
+                  <GridDistortion
+                    imageSrc="./Frame 99.svg"
+                    grid={20}
+                    mouse={0.1}
+                    strength={0.15}
+                    relaxation={0.9}
+                    className="custom-class"
+                  />
+                </div>
 
                 <h1 className=" w-[50%] leading-none font-[Heading] text-[5.1vw] ">
                   we turn customer data into{" "}
