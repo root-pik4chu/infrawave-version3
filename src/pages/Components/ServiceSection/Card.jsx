@@ -7,7 +7,7 @@ const Card = ({ color, i, targetScale, progress, range }) => {
   const staggerOffset = i * 150; // Reduced offset for better stacking
    
   // Create scale transform based on scroll progress
-  const scale = useTransform(progress, range, [1, targetScale]);
+  // const scale = useTransform(progress, range, [1, targetScale]);
   
   return (
     <div className="h-[300px] flex items-center justify-end sticky top-[10vh] px-[1vw]" style={{color:"#fff"}}>              
