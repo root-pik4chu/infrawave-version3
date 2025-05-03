@@ -9,7 +9,7 @@ export const opacity = {
     },
   };
   
- export const s lideUp = {
+ export const slideUp = {
     initial: {
       top: 0,
     },
