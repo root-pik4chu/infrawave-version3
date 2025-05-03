@@ -1,6 +1,6 @@
 'use client'
 // import styles from './page.module.css' 
-import { projects } from '../../data/data'; 
+import { projects } from '../../../data/data'; 
 import Card from './Card'; 
 import React, { useRef } from 'react'; 
 import { useScroll } from 'framer-motion'; 

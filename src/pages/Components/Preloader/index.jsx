@@ -2,7 +2,7 @@
 import styles from '../Preloader/styles.module.scss';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import anim from './anim';
+import anim from '../../../preloaderAnimtion/anim';
  
 const words = ["Infrawave Solutions", " "," ", "Web Dev " ,"AI Ml" , "BlockChain" ]
 
