@@ -65,11 +65,11 @@ const HomePage = () => {
     );
   }, []);
 
-  const [key , setKey] = useState(router.route)
-  useEffect(()=>{
-    setKey(router.route)
-  },[router.route])
-
+  const [key, setKey] = useState(router.route);
+  useEffect(() => {
+    setKey(router.route);
+  }, [router.route]);
+  // useEffect(() => {}, []);
 
   return (
     <div>
@@ -82,10 +82,10 @@ const HomePage = () => {
             <div className="w-full h-full flex items-srart justify-between flex-col px-[1vw]  ">
               {/* pt-[27vw] */}
               <div className="w-full ">
-                <div className="w-full h-[55vh] pt-[2vw]" >
+                <div className="w-full h-[55vh] pt-[2vw]">
                   {/* <h1 className="pt-[2vw]" style={{fontSize:"18.5vw", color: "fff"}}>INfrawave</h1> */}
                   <GridDistortion
-                   key={key}
+                    key={key}
                     imageSrc="./Frame 99.svg"
                     grid={20}
                     mouse={0.1}
@@ -132,10 +132,7 @@ const HomePage = () => {
                   className="w-1/3 h-full  absolute p-[1vw] hidden md:flex"
                 >
                   {/* first box */}
-                  <div className="w-full h-full bg-zinc-900 rounded-4xl">
-
-
-                  </div>
+                  <div className="w-full h-full bg-zinc-900 rounded-4xl"></div>
                 </div>
 
                 <div className="video h-full w-full object-cover p-[1vw] ">
@@ -158,10 +155,7 @@ const HomePage = () => {
                 >
                   {/* <div className="w-[2vw] h-full bg-yellow-400 z-20"></div> */}
                   {/* third box */}
-                  <div className="w-full h-full rounded-4xl bg-zinc-900 ">
-
-
-                  </div>
+                  <div className="w-full h-full rounded-4xl bg-zinc-900 "></div>
                 </div>
               </div>
             </div>
