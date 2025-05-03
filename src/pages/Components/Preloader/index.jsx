@@ -2,7 +2,7 @@
 import styles from '../Preloader/styles.module.scss';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { opacity, slideUp } from '../../../../src/Layout/Curve/anim';
+import { opacity, slideUp } from './anim';
 
 const words = ["Infrawave Solutions", " "," ", "Web Dev " ,"AI Ml" , "BlockChain" ]
 
