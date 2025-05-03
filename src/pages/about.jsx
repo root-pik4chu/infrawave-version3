@@ -6,20 +6,35 @@ const About = () => {
     
     <Layout backgroundColor={"#BCF366"}>
 
-    <div className="min-h-screen p-8">
-      <h1 className="text-4xl font-bold mb-6">About Us</h1>
-      <div className="max-w-2xl">
-        <p className="text-lg mb-4">
-          Welcome to our website! We are a team of passionate individuals dedicated to creating amazing digital experiences.
-        </p>
-        <p className="text-lg mb-4">
-          Our mission is to help businesses and individuals achieve their goals through innovative solutions and creative thinking.
-        </p>
-        <p className="text-lg">
-          With years of experience in the industry, we bring expertise and dedication to every project we undertake.
-        </p>
+    <div className="w-full h-[110vh] relative text-black ">
+        <div className="w-full h-full relative ">
+          <h2 className=" w-[80%] h-[40vh] leading-none pt-[5vw]">
+            building brands, boosting businesses, and redefining possibilities. let’s
+            grow your brand together.
+          </h2>
+        <div className="w-full h-[40vh] ">
+          <div className="w-full h-full grid grid-cols-5 ">
+            <div className="col-start-3 w-full ">
+              <p className='mb-[2vw]'>project Delivered</p>
+              <h3 className="text-5xl" >100+</h3>
+              <p>creative work that drives real results</p>
+            </div>
+            
+            <div className="col-start-4 w-full ">
+              <p className='mb-[2vw]'>project Delivered</p>
+              <h3 className="text-5xl" >100+</h3>
+              <p>creative work that drives real results</p>
+            </div>
+
+            <div className="col-start-5 w-full ">
+              <p className='mb-[2vw]'>project Delivered</p>
+              <h3 className="text-5xl" >100+</h3>
+              <p>creative work that drives real results</p>
+            </div>
+          </div>
+        </div>
+        </div>
       </div>
-    </div>
 
     </Layout>
     </>

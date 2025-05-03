@@ -1,8 +1,9 @@
 import { useGSAP } from "@gsap/react";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import GridDistortion from "../../../ExperimentData/GridDistortion";
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 // import ScrollGradientText from "../components/ScrollGradientText";
@@ -16,6 +17,7 @@ const HomePage = () => {
   const secondBox = useRef(null);
   const videoBox = useRef(null);
   const box = useRef(null);
+  const router = useRouter();
 
   useGSAP(() => {
     // Create a timeline for coordinated animations
@@ -63,6 +65,12 @@ const HomePage = () => {
     );
   }, []);
 
+  const [key , setKey] = useState(router.route)
+  useEffect(()=>{
+    setKey(router.route)
+  },[router.route])
+
+
   return (
     <div>
       <div className="w-[100%] h-[250vh] bg-zinc-50 ">
@@ -74,9 +82,10 @@ const HomePage = () => {
             <div className="w-full h-full flex items-srart justify-between flex-col px-[1vw]  ">
               {/* pt-[27vw] */}
               <div className="w-full ">
-                <div className="w-full h-[55vh] pt-[2vw]">
+                <div className="w-full h-[55vh] pt-[2vw]" >
                   {/* <h1 className="pt-[2vw]" style={{fontSize:"18.5vw", color: "fff"}}>INfrawave</h1> */}
                   <GridDistortion
+                   key={key}
                     imageSrc="./Frame 99.svg"
                     grid={20}
                     mouse={0.1}
@@ -122,7 +131,11 @@ const HomePage = () => {
                   ref={firstBox}
                   className="w-1/3 h-full  absolute p-[1vw] hidden md:flex"
                 >
-                  <div className="w-full h-full bg-zinc-900 rounded-4xl"></div>
+                  {/* first box */}
+                  <div className="w-full h-full bg-zinc-900 rounded-4xl">
+
+
+                  </div>
                 </div>
 
                 <div className="video h-full w-full object-cover p-[1vw] ">
@@ -144,7 +157,11 @@ const HomePage = () => {
                   className="w-1/3 h-full  absolute right-0 p-[1vw] hidden md:flex"
                 >
                   {/* <div className="w-[2vw] h-full bg-yellow-400 z-20"></div> */}
-                  <div className="w-full h-full rounded-4xl bg-zinc-900 "></div>
+                  {/* third box */}
+                  <div className="w-full h-full rounded-4xl bg-zinc-900 ">
+
+
+                  </div>
                 </div>
               </div>
             </div>

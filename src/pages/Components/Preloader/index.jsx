@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
 
-const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo"]
+const words = ["Infrawave Solutions", " "," ", "Web Dev " ,"AI Ml" , "BlockChain" ]
 
 export default function Index() {
     const [index, setIndex] = useState(0);
@@ -27,11 +27,11 @@ export default function Index() {
     const curve = {
         initial: {
             d: initialPath,
-            transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1]}
+            transition: {duration: 1, ease: [0.76, 0, 0.24, 1]}
         },
         exit: {
             d: targetPath,
-            transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3}
+            transition: {duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.3}
         }
     }
 

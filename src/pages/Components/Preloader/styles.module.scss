@@ -5,9 +5,10 @@
    align-items: center;
    justify-content: center;
    position: fixed;
-   z-index: 99;
+   z-index: 999;
    background-color: #000000;
    svg{
+       
        position: absolute;
        top: 0;
        width: 100%;
@@ -17,19 +18,13 @@
        }
    }
    p{
+    z-index: 9999;
        display: flex;
        color: white;
        font-size: 42px;
        align-items: center;
        position: absolute;
        z-index: 1;
-       span{
-           display: block;
-           width: 10px;
-           height: 10px;
-           background-color: white;
-           border-radius: 50%;
-           margin-right: 10px;
-       }
+       
    }
 }
