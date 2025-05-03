@@ -1,4 +1,4 @@
-// export const projects = [
+// export projects = [
 //    {
      
 //      color: "#111111"
