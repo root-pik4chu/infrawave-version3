@@ -1,5 +1,5 @@
 // anim.ts
-const opacity = {
+export const opacity = {
     initial: {
       opacity: 0,
     },
@@ -9,7 +9,7 @@ const opacity = {
     },
   };
   
-  const slideUp = {
+ export const s lideUp = {
     initial: {
       top: 0,
     },
@@ -19,5 +19,5 @@ const opacity = {
     },
   };
   
-  export default { opacity, slideUp };
+  
   
