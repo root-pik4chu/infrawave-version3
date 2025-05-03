@@ -2,11 +2,12 @@
 import styles from '../Preloader/styles.module.scss';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { opacity, slideUp } from './anim';
-
+import anim from './anim';
+ 
 const words = ["Infrawave Solutions", " "," ", "Web Dev " ,"AI Ml" , "BlockChain" ]
 
 export default function Index() {
+    const { opacity, slideUp } = anim;
     const [index, setIndex] = useState(0);
     const [dimension, setDimension] = useState({width: 0, height:0});
 
