@@ -23,25 +23,34 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="Navbar fixed top-0  h-[10vh] w-full bg-zinc-50 text-black px-[1vw] ">
-      <div className="w-full h-full grid grid-cols-5 items-center z-[9999]">
+    <div className="Navbar fixed top-0  h-[10vh] w-full  text-black px-[1vw] ">
+
+      {/* -------------- */}
+
+      
+
+
+      {/* -------------- */}
+
+
+      <div className="w-full h-full grid grid-cols-5 items-center z-[9999] ">
         {/* Logo */}
         <div className="flex justify-start col-span-1">
           <Link href="/">
-            <Image src="/Group_57.svg" alt="Infrawave Logo" width={120} height={30} />
+            <Image src="/Group_57.svg" className='' alt="Infrawave Logo" width={120} height={30} />
           </Link>
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:grid col-span-4 grid-cols-4">
+        <div className="hidden md:grid col-span-4 grid-cols-4 mix-blend-difference">
           {navItems.map((item, index) => (
             <div key={index} className="flex justify-end">
               <Link 
                 // onClick={handleVisibility}
                 href={item.path}
-                className="text-[0.8vw] font-medium capitalize hover:cursor-pointer"
+                className="text-[0.8vw] font-medium capitalize hover:cursor-pointer mix-blend-difference"
               >
-                {item.name}
+                <p className='   '>{item.name}</p>
               </Link>
             </div>
           ))}
@@ -57,7 +66,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       {menuOpen && (
-        <div className="md:hidden absolute top-[10vh] left-0 w-full bg-zinc-50 flex flex-col items-center gap-6 py-6 shadow-md ">
+        <div className="md:hidden absolute top-[10vh] left-0 w-full  flex flex-col items-center gap-6 py-6 shadow-md ">
           {navItems.map((item, index) => (
             <Link
               key={index}
