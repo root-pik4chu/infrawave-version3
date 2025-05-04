@@ -34,8 +34,13 @@ export default function Home() {
       </AnimatePresence>
     
      <HomePage />
+     <div className="w-full h-[23vh] bg-zinc-50 px-[1vw]"><h1>services</h1></div>
+
      <Container />
-     <div className="w-full h-screen bg-zinc-50"></div>
+     <div className="w-full h-[60vh] md:h-[20vh] flex items-end px-[1vw]  "> <h1>projects</h1></div>
+
+     <FiveProjectSlider />
+     {/* <div className="w-full h-screen bg-zinc-50"></div> */}
     <Footer />
     
    

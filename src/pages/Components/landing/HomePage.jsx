@@ -73,7 +73,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <div className="w-[100%] h-[250vh] bg-zinc-50 ">
+      <div className="w-[100%] h-[230vh] bg-zinc-50 ">
         {/* <Lines /> */}
 
         <div className="w-full h-full overflow-hidden">
@@ -135,8 +135,8 @@ const HomePage = () => {
                   <div className="w-full h-full bg-zinc-900 rounded-4xl"></div>
                 </div>
 
-                <div className="video h-full w-full object-cover p-[1vw] ">
-                  <video
+                <div className="video h-full w-full object-cover p-[1vw] bg-zinc-700">
+                  {/* <video
                     autoPlay
                     loop
                     muted
@@ -147,7 +147,7 @@ const HomePage = () => {
                       src="https://framerusercontent.com/assets/7noJ6ZABGBxwSX8scPjAZOqcOhU.mp4"
                       type="video/mp4"
                     />
-                  </video>
+                  </video> */}
                 </div>
                 <div
                   ref={secondBox}

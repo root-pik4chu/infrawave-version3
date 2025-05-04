@@ -38,7 +38,7 @@ const FiveProjectSlider = () => {
         end: "+=300%",
         pin: true,
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     });
   
@@ -66,8 +66,9 @@ const FiveProjectSlider = () => {
 
   return (
     <div>
-      <div
-        className="w-full h-[400vh] rounded-t-[2vw] "
+     <div className="sm:block hidden">
+     <div
+        className="w-full h-[400vh]  "
         style={{
           backgroundImage:
             "url('https://www.lumina-design.co/static/media/i_project_bg.9a00241e79d94cfd91eb.png')",
@@ -105,6 +106,10 @@ const FiveProjectSlider = () => {
             })}
           </div>
         </div>
+      </div>
+     </div>
+      <div className="sm:hidden block">
+        <div className="w-full bg-red-900 h-screen"></div>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ body{
 
 @font-face {
   font-family: heading;
-  src: url("../font/GILROY-MEDIUM.TTF");
+  src: url("../font/DIRTYLINE\ 36DAYSOFTYPE\ 2022.OTF");
 }
 @font-face {
   font-family: smallHeading;
@@ -40,6 +40,7 @@ h4{
 h2{
   font-family: heading;
   font-size: 3vw;
+  line-height: 3vw;
 }
 p{
   font-family: smallHeading;
@@ -49,4 +50,17 @@ p{
 
 .Navbar{
   z-index: 999999;
+}
+
+
+
+@media screen and (max-width: 400px) {
+  h2 {
+    font-size: 10vw;
+    line-height: 9.8vw;
+  }
+  p{
+    font-family: smallHeading;
+    font-size: 4vw;
+  }
 }
