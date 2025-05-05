@@ -1,9 +1,9 @@
 import React,{useEffect} from 'react';
 import Layout from "../Layout/Curve"
-import SplitTextAnimation from '../splitTextAnimation/SplitTextAnimation';
+
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
-import AnimatedText from "../splitTextAnimation/AnimatedText"
+
 const About = () => {
 
   useEffect(() => {
