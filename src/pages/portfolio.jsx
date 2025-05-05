@@ -1,6 +1,19 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Layout from "../Layout/Curve"
+import LocomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 const Portfolio = () => {
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true,
+      lerp: 0.1,
+    });
+
+    return () => {
+      scroll.destroy();
+    };
+  }, []);
   const projects = [
     {
       title: 'Project 1',
@@ -24,7 +37,7 @@ const Portfolio = () => {
    
    <Layout >
 
-   <div className="min-h-screen p-8">
+   <div className="w-full h-screen bg-pink-400 p-8">
       <h1 className="text-4xl font-bold mb-6">Our Portfolio</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
@@ -38,6 +51,7 @@ const Portfolio = () => {
         ))}
       </div>
     </div>
+      <div className="w-full h-screen bg-red-300">hii</div>
       
 </Layout>
    </>

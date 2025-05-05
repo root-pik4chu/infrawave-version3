@@ -65,8 +65,7 @@ const FiveProjectSlider = () => {
   
 
   return (
-    <div>
-     <div className="sm:block hidden">
+    <>
      <div
         className="w-full h-[400vh]  "
         style={{
@@ -88,6 +87,7 @@ const FiveProjectSlider = () => {
             {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => {
               return (
                 <div
+                key={`project-${index}`}
                   ref={addProjectRef}
                   className="project w-[27vw] h-[60vh] border-zinc-900/10 flex-shrink-0 flex items-center justify-center flex-col rounded-3xl shadow-lg border-1  transform z-[100] p-[1vw] bg-blue-300"
                 >
@@ -107,11 +107,9 @@ const FiveProjectSlider = () => {
           </div>
         </div>
       </div>
-     </div>
-      <div className="sm:hidden block">
-        <div className="w-full bg-red-900 h-screen"></div>
-      </div>
-    </div>
+
+      
+    </>
   );
 };
 

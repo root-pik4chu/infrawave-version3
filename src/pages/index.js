@@ -7,6 +7,7 @@ import FiveProjectSlider from "./Components/landing/FiveProjectSlider";
 import Navbar from "../NavBar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Container from "./Components/ServiceSection/Container";
+import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,9 +22,36 @@ export default function Home() {
         setIsLoading(false);
         document.body.style.cursor = 'default';
         window.scrollTo(0, 0);
-      }, 2000);
+      },2000);
     })();
   }, []);
+
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 1.2,
+  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  //     smooth: true,
+  //     direction: "vertical",
+  //     gestureDirection: "vertical",
+  //     smoothTouch: false,
+  //   });
+
+  //   const raf = (time) => {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   };
+  //   setTimeout(() => {
+  //           setIsLoading(false);
+  //           document.body.style.cursor = 'default';
+  //           window.scrollTo(0, 0);
+  //         }, 2000);
+  //   requestAnimationFrame(raf);
+
+  //   return () => {
+  //     lenis.destroy();
+  //   };
+  // }, []);
+
   
   const blurLayers = [
     { blur: 0.5, mask: "linear-gradient(rgba(0,0,0,0) 0%, rgb(0,0,0) 12.5%, rgb(0,0,0) 25%, rgba(0,0,0,0) 37.5%)" },

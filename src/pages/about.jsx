@@ -1,40 +1,35 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Layout from "../Layout/Curve"
+import SplitTextAnimation from '../splitTextAnimation/SplitTextAnimation';
+import LocomotiveScroll from 'locomotive-scroll';
+import 'locomotive-scroll/dist/locomotive-scroll.css';
+import AnimatedText from "../splitTextAnimation/AnimatedText"
 const About = () => {
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true,
+      lerp: 0.1,
+    });
+
+    return () => {
+      scroll.destroy();
+    };
+  }, []);
   return (
     <>
     
-    <Layout backgroundColor={"#BCF366"}>
+    <Layout >
+      <div className="w-full h-[5vw] bg-red-950"></div>
+<div className="w-full h-screen bg-red-900"><h2>hii</h2>
+<AnimatedText text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt temporibus assumenda illo sint impedit, veniam aliquid animi. Dolores cum enim iste! Animi, officia facilis! Blanditiis non quam ex dignissimos rerum!" />
 
-    <div className="w-full h-[110vh] relative text-black ">
-        <div className="w-full h-full relative ">
-          <h2 className=" w-[80%] h-[40vh] leading-none pt-[5vw]">
-            building brands, boosting businesses, and redefining possibilities. let’s
-            grow your brand together.
-          </h2>
-        <div className="w-full h-[40vh] ">
-          <div className="w-full h-full grid grid-cols-5 ">
-            <div className="col-start-3 w-full ">
-              <p className='mb-[2vw]'>project Delivered</p>
-              <h3 className="text-5xl" >100+</h3>
-              <p>creative work that drives real results</p>
-            </div>
-            
-            <div className="col-start-4 w-full ">
-              <p className='mb-[2vw]'>project Delivered</p>
-              <h3 className="text-5xl" >100+</h3>
-              <p>creative work that drives real results</p>
-            </div>
 
-            <div className="col-start-5 w-full ">
-              <p className='mb-[2vw]'>project Delivered</p>
-              <h3 className="text-5xl" >100+</h3>
-              <p>creative work that drives real results</p>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
+
+</div>
+<div className="w-full h-screen bg-red-900"><h2>hii</h2></div>
+<div className="w-full h-screen bg-red-900"><h2>hii</h2></div>
 
     </Layout>
     </>
