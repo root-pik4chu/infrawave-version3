@@ -50,7 +50,6 @@ h2{
 p{
   font-family: smallHeading;
   font-size: 0.9vw;
-  
 }
 
 
@@ -61,11 +60,8 @@ p{
 
 
 @media screen and (max-width: 400px) {
-  h1{
-    font-size: 15vw;
-  }
   h2 {
-    font-size: 8vw;
+    font-size: 10vw;
     line-height: 9.8vw;
   }
   p{

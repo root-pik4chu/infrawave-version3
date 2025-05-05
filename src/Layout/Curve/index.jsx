@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router';
 import { text, curve, translate } from './anim';
-import "../Curve/style.module.scss"
+// import "../Curve/style.scss"
 // @use "../Layout/Curve/style.scss" as *;
 const routes = {
  
