@@ -5,11 +5,13 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import GridDistortion from "../../../ExperimentData/GridDistortion";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import SplitText from "../../../a_SpliTextAnimationCodgrid/splitWrapper"
+import SplitText from "../../../a_SpliTextAnimationCodgrid/splitWrapper";
+
 // import ScrollGradientText from "../components/ScrollGradientText";
 // import Lines from "../components/Lines";
 
-// Register ScrollTrigger plugin
+// Register ScrollTrigger plugin\
+import MagnetLines from "../../../ExperimentData/MagnetLines";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
@@ -73,18 +75,27 @@ const HomePage = () => {
 
   return (
     <div>
-      <div className="w-[100%] h-[230vh] bg-zinc-50 ">
-        {/* <Lines /> */}
-
+      <div className="w-[100%] h-[230vh] bg-[#FF4E27] ">
+        {/* <Lines /> -------------------------------------- */}
+        <div className=" top-0 left-0 w-full h-full z-[1] pointer-events-none px-[1vw] absolute ">
+        <div className="flex w-full h-full justify-between ">
+          {Array(6)
+            .fill(0)
+            .map((_, i) => (
+              <div key={i} className="w-px bg-white/50 h-full" />
+            ))}
+        </div>
+      </div>
+      {/* -------------------------------------------- */}
         <div className="w-full h-full overflow-hidden">
           {/* Top section */}
           <div className="w-full h-[85vh]">
             <div className="w-full h-full flex items-srart justify-between flex-col px-[1vw]  ">
               {/* pt-[27vw] */}
               <div className="w-full ">
-                <div className="w-full h-[55vh] pt-[2vw]">
+                <div className="w-full h-[25vh] pt-[2vw]">
                   {/* <h1 className="pt-[2vw]" style={{fontSize:"18.5vw", color: "fff"}}>INfrawave</h1> */}
-                  <GridDistortion
+                  {/* <GridDistortion
                     key={key}
                     imageSrc="./Frame 99.svg"
                     grid={20}
@@ -92,15 +103,25 @@ const HomePage = () => {
                     strength={0.15}
                     relaxation={0.9}
                     className="custom-class"
-                  />
+                  /> */}
+              
                 </div>
-                <SplitText>
-                <h1 className=" w-[50%] leading-none font-[Heading] text-[5.1vw] ">
-                  we turn customer data into{" "}
-                  <span className="text-blue-500">margin</span>
-                </h1>
-                </SplitText>
                 
+                  <div className="w-full h-[50vh] relative flex ">
+                    
+                  <h1 className=" w-[70%] leading-none font-[Heading] text-[5.1vw] ">
+                    we turn customer data into{" "}
+                    <span className="text-white">margin</span>
+                  </h1>
+                  {/* <p className="w-[50%] leading-none  font-[smallHeading]" style={{fontSize:"1.5vw" , lineHeight:"1.5vw"}}>
+                    We turn data into profit, plain and simple. Our approach
+                    pinpoints the crucial identifiers of growth, deploys robust
+                    collection, processing, and storage infrastructure, and
+                    transforms your data into a tangible, profitable product.
+                  </p> */}
+                 
+                  </div>
+               
               </div>
               <div className="w-full flex items-end justify-between ">
                 <div className="flex gap-[0.5vw]">
@@ -112,14 +133,13 @@ const HomePage = () => {
                   </button>
                 </div>
                 <SplitText>
-                <p className="w-[30%] leading-none  font-[smallHeading]">
-                  We turn data into profit, plain and simple. Our approach
-                  pinpoints the crucial identifiers of growth, deploys robust
-                  collection, processing, and storage infrastructure, and
-                  transforms your data into a tangible, profitable product.
-                </p>
+                  <p className="w-[30%] leading-none  font-[smallHeading]">
+                    We turn data into profit, plain and simple. Our approach
+                    pinpoints the crucial identifiers of growth, deploys robust
+                    collection, processing, and storage infrastructure, and
+                    transforms your data into a tangible, profitable product.
+                  </p>
                 </SplitText>
-                
               </div>
             </div>
           </div>
@@ -137,10 +157,14 @@ const HomePage = () => {
                 >
                   {/* first box */}
                   <div className="w-full h-full bg-zinc-50 rounded-4xl object-cover overflow-hidden border-zinc-50 border-[2vw]">
-                  <div className=" w-full h-[5vw]  py-[1vw]">
+                    <div className=" w-full h-[5vw]  py-[1vw]">
                       <h2>project name</h2>
                     </div>
-                    <img className="bg-cover object-cover w-full h-full" src="https://images.unsplash.com/photo-1617355405361-29f0f0a3d737?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                    <img
+                      className="bg-cover object-cover w-full h-full"
+                      src="https://images.unsplash.com/photo-1617355405361-29f0f0a3d737?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                    />
                   </div>
                 </div>
 
@@ -168,7 +192,11 @@ const HomePage = () => {
                     <div className=" w-full h-[5vw]  py-[1vw]">
                       <h2>project name</h2>
                     </div>
-                    <img className="object-cover w-full h-full" src="https://images.unsplash.com/photo-1582275902060-7a4368e84acc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                    <img
+                      className="object-cover w-full h-full"
+                      src="https://images.unsplash.com/photo-1582275902060-7a4368e84acc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>

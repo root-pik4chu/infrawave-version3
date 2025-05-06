@@ -31,8 +31,9 @@ h1,button,p{
 }
 
 h1{
-  font-size: 5.2vw;
+  font-size: 8vw;
   font-family: heading;
+  line-height: 7.3vw;
 }
 h3{
   font-family: smallHeading;
@@ -44,12 +45,13 @@ h4{
 }
 h2{
   font-family: heading;
-  font-size: 3vw;
-  line-height: 3vw;
+  font-size: 2vw;
+  line-height: 2vw;
 }
 p{
   font-family: smallHeading;
-  font-size: 0.9vw;
+  font-size: 0.82vw;
+  line-height: 1.1vw;
 }
 
 

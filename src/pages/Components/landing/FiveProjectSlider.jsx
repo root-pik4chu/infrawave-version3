@@ -91,16 +91,16 @@ const FiveProjectSlider = () => {
                 style={{backgroundColor: item.color}}
                 key={`project-${index}`}
                   ref={addProjectRef}
-                  className="project w-[27vw] h-[60vh] border-zinc-900/10 flex-shrink-0 flex items-center justify-center flex-col rounded-3xl shadow-lg border-1  transform z-[100] p-[1vw] "
+                  className="project w-[27vw] h-[60vh] border-zinc-900/10 flex-shrink-0 flex items-center justify-center flex-col rounded-4xl shadow-lg border-1  transform z-[100] p-[1vw] "
                 >
                   <div className="w-full h-[60%]">
                     <img
-                      className="object-cover w-full h-full overflow-hidden  rounded-2xl border-[.5vw]"
+                      className="object-cover w-full h-full overflow-hidden  rounded-4xl border-[.2vw]"
                       src="https://images.unsplash.com/photo-1695634621145-9133286e0247?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHByb2plY3QlMjBtb2NrdXBzfGVufDB8fDB8fHww"
                       alt=""
                     />
                   </div>
-                  <div className="w-full h-[40%] pt-[2vw]">
+                  <div className="w-full h-[40%] pt-[1vw]">
                     <h2 className="lowercase">{item.name}</h2>
                   </div>
                 </div>

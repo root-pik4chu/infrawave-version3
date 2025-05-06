@@ -14,15 +14,18 @@ export default function Home() {
 
   useEffect(() => {
     (async () => {
-
-      const LocomotiveScroll = (await import('locomotive-scroll')).default
-      const locomotiveScroll = new LocomotiveScroll();
-
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+  
+      const locomotiveScroll = new LocomotiveScroll({
+        smooth: true,
+        lerp: 0.08, // easing (0.1 is slow & smooth, 1 is instant)
+      });
+  
       setTimeout(() => {
         setIsLoading(false);
         document.body.style.cursor = 'default';
         window.scrollTo(0, 0);
-      },2000);
+      }, 2000);
     })();
   }, []);
 
@@ -71,8 +74,8 @@ export default function Home() {
 
       </AnimatePresence>
      <HomePage />
-     <div className="w-full h-[23vh] bg-zinc-50 px-[1vw]"><h1>services</h1></div>
-
+    <AboutSection />
+     <div className="w-full h-[25vh] bg-zinc-50 px-[1vw] flex items-center"><h1>services</h1></div>
      <Container />
      <div className="w-full h-[60vh] md:h-[20vh] flex items-end px-[1vw]  "> <h1>projects</h1></div>
 

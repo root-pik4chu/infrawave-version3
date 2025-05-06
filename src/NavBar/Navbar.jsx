@@ -23,7 +23,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="Navbar fixed top-0  h-[10vh] w-full bg-zinc-50 text-black px-[1vw] ">
+    <div className="Navbar fixed top-0  h-[10vh] w-full  text-black px-[1vw] ">
       <div className="w-full h-full grid grid-cols-5 items-center z-[9999]">
         {/* Logo */}
         <div className="flex justify-start col-span-1">
@@ -39,7 +39,7 @@ const Navbar = () => {
               <Link 
                 // onClick={handleVisibility}
                 href={item.path}
-                className="text-[0.8vw] font-medium capitalize hover:cursor-pointer"
+                className="text-[0.8vw] font-medium capitalize hover:cursor-pointer mix-blend-difference"
               >
                 {item.name}
               </Link>

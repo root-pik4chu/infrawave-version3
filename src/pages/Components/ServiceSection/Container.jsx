@@ -15,7 +15,7 @@ export default function Container() {
     <main className="relative w-full">
       
       {/* Desktop Layout */}
-      <div className="hidden md:block md:h-[270vh]">
+      <div className="hidden md:block md:h-[240vh]">
         <div ref={container}>
           {projects.map((project, i) => {
             const targetScale = 1 - ((projects.length - i) * 0.01);
