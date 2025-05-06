@@ -17,7 +17,7 @@ export default function SplitTextAnimationWrapper({
   const splitTextRef = useRef([]);
   const lines = useRef([]);
 
-  useGSAP(
+  useEffect(
     () => {
       if (!containerRef.current) return;
       splitTextRef.current = [];
@@ -37,7 +37,7 @@ export default function SplitTextAnimationWrapper({
         const split = SplitText.create(element, {
           type: "lines",
           mask: "lines",
-          lineClass: "line++",
+          linesClass: "line++",
         });
         splitTextRef.current.push(split);
 
@@ -69,7 +69,7 @@ export default function SplitTextAnimationWrapper({
             trigger: containerRef.current,
             start: "top 75%",
             once: true,
-            markers:true,
+            // markers:true,
           },
         });
       } else {

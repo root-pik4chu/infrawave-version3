@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import GridDistortion from "../../../ExperimentData/GridDistortion";
 import { useRouter } from "next/router";
 import Image from "next/image";
-
+import SplitText from "../../../a_SpliTextAnimationCodgrid/splitWrapper"
 // import ScrollGradientText from "../components/ScrollGradientText";
 // import Lines from "../components/Lines";
 
@@ -24,7 +24,7 @@ const HomePage = () => {
     const t1 = gsap.timeline({
       scrollTrigger: {
         trigger: box.current,
-        start: "top 10%", // Start animation when section top reaches 20% from viewport top
+        start: "top 0%", // Start animation when section top reaches 20% from viewport top
         end: "+=300", // End animation after scrolling 300px
         scrub: 1, // Smoother scrubbing with slight delay
         // markers: true,       // Keep markers for debugging (remove in production)
@@ -94,11 +94,13 @@ const HomePage = () => {
                     className="custom-class"
                   />
                 </div>
-
+                <SplitText>
                 <h1 className=" w-[50%] leading-none font-[Heading] text-[5.1vw] ">
                   we turn customer data into{" "}
                   <span className="text-blue-500">margin</span>
                 </h1>
+                </SplitText>
+                
               </div>
               <div className="w-full flex items-end justify-between ">
                 <div className="flex gap-[0.5vw]">
@@ -109,13 +111,15 @@ const HomePage = () => {
                     Portfolio
                   </button>
                 </div>
-
+                <SplitText>
                 <p className="w-[30%] leading-none  font-[smallHeading]">
                   We turn data into profit, plain and simple. Our approach
                   pinpoints the crucial identifiers of growth, deploys robust
                   collection, processing, and storage infrastructure, and
                   transforms your data into a tangible, profitable product.
                 </p>
+                </SplitText>
+                
               </div>
             </div>
           </div>
@@ -132,11 +136,16 @@ const HomePage = () => {
                   className="w-1/3 h-full  absolute p-[1vw] hidden md:flex"
                 >
                   {/* first box */}
-                  <div className="w-full h-full bg-zinc-900 rounded-4xl"></div>
+                  <div className="w-full h-full bg-zinc-50 rounded-4xl object-cover overflow-hidden border-zinc-50 border-[2vw]">
+                  <div className=" w-full h-[5vw]  py-[1vw]">
+                      <h2>project name</h2>
+                    </div>
+                    <img className="bg-cover object-cover w-full h-full" src="https://images.unsplash.com/photo-1617355405361-29f0f0a3d737?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                  </div>
                 </div>
 
-                <div className="video h-full w-full object-cover p-[1vw] bg-zinc-700">
-                  {/* <video
+                <div className="video h-full w-full object-cover p-[1vw] ">
+                  <video
                     autoPlay
                     loop
                     muted
@@ -147,7 +156,7 @@ const HomePage = () => {
                       src="https://framerusercontent.com/assets/7noJ6ZABGBxwSX8scPjAZOqcOhU.mp4"
                       type="video/mp4"
                     />
-                  </video> */}
+                  </video>
                 </div>
                 <div
                   ref={secondBox}
@@ -155,7 +164,12 @@ const HomePage = () => {
                 >
                   {/* <div className="w-[2vw] h-full bg-yellow-400 z-20"></div> */}
                   {/* third box */}
-                  <div className="w-full h-full rounded-4xl bg-zinc-900 "></div>
+                  <div className="w-full h-full rounded-4xl bg-zinc-50 object-cover overflow-hidden border-zinc-50 border-[2vw] relative">
+                    <div className=" w-full h-[5vw]  py-[1vw]">
+                      <h2>project name</h2>
+                    </div>
+                    <img className="object-cover w-full h-full" src="https://images.unsplash.com/photo-1582275902060-7a4368e84acc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                  </div>
                 </div>
               </div>
             </div>

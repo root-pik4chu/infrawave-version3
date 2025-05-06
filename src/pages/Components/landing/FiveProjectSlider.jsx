@@ -1,8 +1,9 @@
+"use Client"
 import { useGSAP } from "@gsap/react";
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
+import projects from "../../../data/ProjectData"
 gsap.registerPlugin(ScrollTrigger);
 
 const FiveProjectSlider = () => {
@@ -67,7 +68,7 @@ const FiveProjectSlider = () => {
   return (
     <>
      <div
-        className="w-full h-[400vh]  "
+        className="w-full h-[400vh]  text-white"
         style={{
           backgroundImage:
             "url('https://www.lumina-design.co/static/media/i_project_bg.9a00241e79d94cfd91eb.png')",
@@ -84,22 +85,23 @@ const FiveProjectSlider = () => {
         >
           {/* Row of projects that moves horizontally */}
           <div ref={sliderRef} className="flex gap-8 h-full p-8">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => {
+            {projects.map((item, index) => {
               return (
                 <div
+                style={{backgroundColor: item.color}}
                 key={`project-${index}`}
                   ref={addProjectRef}
-                  className="project w-[27vw] h-[60vh] border-zinc-900/10 flex-shrink-0 flex items-center justify-center flex-col rounded-3xl shadow-lg border-1  transform z-[100] p-[1vw] bg-blue-300"
+                  className="project w-[27vw] h-[60vh] border-zinc-900/10 flex-shrink-0 flex items-center justify-center flex-col rounded-3xl shadow-lg border-1  transform z-[100] p-[1vw] "
                 >
-                  <div className="w-full h-[60%] ">
+                  <div className="w-full h-[60%]">
                     <img
-                      className="object-cover w-full h-full overflow-hidden  rounded-2xl"
+                      className="object-cover w-full h-full overflow-hidden  rounded-2xl border-[.5vw]"
                       src="https://images.unsplash.com/photo-1695634621145-9133286e0247?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHByb2plY3QlMjBtb2NrdXBzfGVufDB8fDB8fHww"
                       alt=""
                     />
                   </div>
-                  <div className="w-full h-[40%] ">
-                    <h4>root</h4>
+                  <div className="w-full h-[40%] pt-[2vw]">
+                    <h2 className="lowercase">{item.name}</h2>
                   </div>
                 </div>
               );
