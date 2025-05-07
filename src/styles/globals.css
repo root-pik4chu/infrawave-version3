@@ -9,10 +9,10 @@ body{
   background-color: #0c0c0c;
   color:rgb(237, 237, 237)
 } */
-body{
+/* body{
   overflow: hidden;
   height: 100%;
-}
+} */
 [data-scroll-container] {
   will-change: transform;
 }
