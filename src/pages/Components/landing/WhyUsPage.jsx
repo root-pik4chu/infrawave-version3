@@ -1,5 +1,5 @@
 import React from 'react'
-import SwipperData from './Swipper/SwipperData'
+import SwipperData from '../../../swipperData/SwipperData'
 
 
 
