@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import "../Swipper/SwipperStyles.css";
+import "../../../../extracss/swiper.css"
 import { Navigation } from "swiper/modules";
 
 export default function SwipperData() {
