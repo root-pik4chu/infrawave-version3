@@ -24,7 +24,7 @@ const InfinityScroller = ({direction , bgColor , text}) => {
   ];
 
   return (
-    <div className="w-full relative overflow-hidden border border-zinc-900  mt-2"  style={{ backgroundColor: `var(${bgColor})`, color: `var(${text})` }}>
+    <div className="w-full relative overflow-hidden border border-zinc-900  mb-10"  style={{ backgroundColor: `var(${bgColor})`, color: `var(${text})` }}>
       
     
       <div className="relative flex gap-[1vw] py-1">

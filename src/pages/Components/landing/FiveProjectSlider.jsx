@@ -69,12 +69,12 @@ const FiveProjectSlider = () => {
     <>
      <div
         className="w-full h-[400vh]  text-white"
-        style={{
-          backgroundImage:
-            "url('https://www.lumina-design.co/static/media/i_project_bg.9a00241e79d94cfd91eb.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        // style={{
+        //   backgroundImage:
+        //     "url('https://www.lumina-design.co/static/media/i_project_bg.9a00241e79d94cfd91eb.png')",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        // }}
       >
         <div className="w-full h-[20vh]"></div>
 

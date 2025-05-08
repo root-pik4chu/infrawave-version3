@@ -1,7 +1,7 @@
 "use client";
 import { useTransform, useScroll, motion } from "framer-motion";
 import Image from "next/image";
-import SplitText from "../../../a_SpliTextAnimationCodgrid/splitWrapper";
+import SplitText from "../../../../a_SpliTextAnimationCodgrid/splitWrapper";
 const Card = ({ color, i, Name, Desc, img, targetScale, progress, range }) => {
   // Calculate staggered position based on index
   const staggerOffset = i * 70; // Reduced offset for better stacking

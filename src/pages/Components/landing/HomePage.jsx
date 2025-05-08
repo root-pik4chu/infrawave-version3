@@ -2,16 +2,18 @@ import { useGSAP } from "@gsap/react";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import GridDistortion from "../../../ExperimentData/GridDistortion";
+
 import { useRouter } from "next/router";
 import Image from "next/image";
 import SplitText from "../../../a_SpliTextAnimationCodgrid/splitWrapper";
+import WhyUsPage from "./WhyUsPage";
 
 // import ScrollGradientText from "../components/ScrollGradientText";
 // import Lines from "../components/Lines";
 
 // Register ScrollTrigger plugin\
-import MagnetLines from "../../../ExperimentData/MagnetLines";
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
@@ -109,7 +111,7 @@ const HomePage = () => {
                 
                   <div className="w-full h-[50vh] relative flex ">
                     
-                  <h1 className=" w-[70%] leading-none font-[Heading] text-[5.1vw] ">
+                  <h1 className=" text-black w-[70%] leading-none font-[Heading] text-[5.1vw] ">
                     we turn customer data into{" "}
                     <span className="text-white">margin</span>
                   </h1>
@@ -132,14 +134,14 @@ const HomePage = () => {
                     Portfolio
                   </button>
                 </div>
-                <SplitText>
-                  <p className="w-[30%] leading-none  font-[smallHeading]">
+           
+                  <p className="w-[30%] text-white leading-none  font-[smallHeading]">
                     We turn data into profit, plain and simple. Our approach
                     pinpoints the crucial identifiers of growth, deploys robust
                     collection, processing, and storage infrastructure, and
                     transforms your data into a tangible, profitable product.
                   </p>
-                </SplitText>
+                
               </div>
             </div>
           </div>

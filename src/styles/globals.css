@@ -51,6 +51,7 @@ h2{
 p{
   font-family: smallHeading;
   font-size: 0.82vw;
+  /* font-size: 1.2vw; */
   line-height: 1.1vw;
 }
 

@@ -6,8 +6,10 @@ import AboutSection from "./Components/landing/AboutSection";
 import FiveProjectSlider from "./Components/landing/FiveProjectSlider";
 import Navbar from "../NavBar/Navbar";
 import Footer from "./Components/Footer/Footer";
-import Container from "./Components/ServiceSection/Container";
+import Container from "../pages/Components/landing/ServiceSection/Container";
 import Lenis from "@studio-freight/lenis";
+import WhyUsPage from "./Components/landing/WhyUsPage";
+import FlipCardsGrid from "./Components/landing/FAQ/FlipCardsGrid";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -71,15 +73,17 @@ export default function Home() {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
    
-
+    {/* <FloatingParticles /> */}
       </AnimatePresence>
      <HomePage />
-    <AboutSection />
-     <div className="w-full h-[25vh] bg-zinc-50 px-[1vw] flex items-center"><h1>services</h1></div>
+     <div className="w-full h-[30vh]  bg-zinc-50 px-[1vw] flex items-center"><h1>services</h1></div>
      <Container />
-     <div className="w-full h-[60vh] md:h-[20vh] flex items-end px-[1vw]  "> <h1>projects</h1></div>
+     <div className="w-full h-[32vh]  flex items-end px-[1vw]  "> <h1>projects</h1></div>
 
      <FiveProjectSlider />
+    <AboutSection />
+     <WhyUsPage />
+     <FlipCardsGrid />
      {/* <div className="w-full h-screen bg-zinc-50"></div> */}
     <Footer />
 
