@@ -8,6 +8,7 @@ import Image from "next/image";
 import SplitText from "../../../a_SpliTextAnimationCodgrid/splitWrapper";
 import WhyUsPage from "./WhyUsPage";
 
+
 // import ScrollGradientText from "../components/ScrollGradientText";
 // import Lines from "../components/Lines";
 
@@ -133,14 +134,15 @@ const HomePage = () => {
                   <button className="px-[3vw] py-[1vw] text-black backdrop-blur-sm border border-black rounded-md hover:shadow-[0px_0px_4px_4px_rgba(0,0,0,0.1)] bg-white/[0.2] text-[0.9vw] transition duration-200">
                     Portfolio
                   </button>
+                  {/* <buttonBorder buttonName="work" /> */}
                 </div>
            
-                  <p className="w-[30%] text-white leading-none  font-[smallHeading]">
+                  <h4 className="w-[30%] text-white leading-none  font-[smallHeading]">
                     We turn data into profit, plain and simple. Our approach
                     pinpoints the crucial identifiers of growth, deploys robust
                     collection, processing, and storage infrastructure, and
                     transforms your data into a tangible, profitable product.
-                  </p>
+                  </h4>
                 
               </div>
             </div>

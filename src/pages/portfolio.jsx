@@ -3,6 +3,7 @@ import Layout from "../Layout/Curve";
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import Footer from './Components/Footer/Footer';
+import { motion } from 'framer-motion';
 
 const Portfolio = () => {
   useEffect(() => {
@@ -22,7 +23,7 @@ const Portfolio = () => {
       id: 1,
       title: "GAM",
       description: "GAM is a consortium of physicians creating novel metrics of healthcare quality.",
-      image: "https://images.unsplash.com/photo-1746591948888-7cc1e170c17b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8",
+      image: "https://images.unsplash.com/photo-1746591948888-7cc1e170c17b?w=500&auto=format&fit=crop&q=60",
       liveSite: "GAMEASURES.COM",
       industry: "Healthcare",
       published: "©2024",
@@ -38,88 +39,91 @@ const Portfolio = () => {
       published: "©2024",
       deliverables: ["UI/UX DESIGN", "MOBILE DESIGN", "DASHBOARD SYSTEM"],
     },
-    {
-      id: 3,
-      title: "Arctic Studio",
-      description: "A design studio specializing in minimalist branding and interactive storytelling.",
-      image: "https://framerusercontent.com/images/iRAGmpLyn4DkP356rEfyWteiayg.jpg?scale-down-to=1024",
-      liveSite: "ARCTIC.STUDIO",
-      industry: "Creative Agency",
-      published: "©2023",
-      deliverables: ["WEB DESIGN", "ANIMATION", "BRAND STRATEGY"],
-    },
-    {
-      id: 4,
-      title: "EcoTrack",
-      description: "EcoTrack helps companies monitor and reduce their carbon emissions in real time.",
-      image: "https://framerusercontent.com/images/1V55Sz0qZ9tnhtSFoBNnD1xd4.png?scale-down-to=1024",
-      liveSite: "ECOTRACK.IO",
-      industry: "Sustainability",
-      published: "©2025",
-      deliverables: ["PRODUCT DESIGN", "DATA VISUALIZATION", "UX RESEARCH"],
-    },
-    {
-      id: 5,
-      title: "VibeSync",
-      description: "Music-powered social platform that syncs real-time mood and playlists with friends.",
-      image: "https://framerusercontent.com/images/1V55Sz0qZ9tnhtSFoBNnD1xd4.png?scale-down-to=1024",
-      liveSite: "VIBESYNC.ME",
-      industry: "Social / Music",
-      published: "©2024",
-      deliverables: ["UI DESIGN", "SOCIAL FEATURES", "RESPONSIVE DESIGN"],
-    }
+    // Add more projects...
   ];
 
   return (
     <Layout>
-      <div className="w-full px-4 space-y-20" data-scroll-container>
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="grid grid-cols-12 gap-6 min-h-[50vh] items-center"
-          >
-            {/* Image Section */}
-            <div className="col-start-1 col-end-13 md:col-end-6">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-auto rounded-xl"
-              />
+      <div className="h-[30vh] w-full flex items-end justify-between bg-[#FF4E27] p-[1vw]">
+        <h1>projects</h1>
+        <div className="flex gap-[1vw]">
+        {
+          ["webDevelopment","AiMl","BlockChain","uiux"].map((item , index)=>{
+            return(
+  
+              <motion.button className="px-[1vw] py-[.3vw] bg-black text-white text-[0.9vw] rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg">
+                      <motion.div
+                      
+                      className="flex items-center flex-col w-full h-full relative overflow-hidden top-[-100%]">{item}<span className='inline-block absolute top-[50%]'>{item}</span></motion.div>
+                    </motion.button>
+            )
+          })
+        }
+                  
+        </div>
+      </div>
+
+      <div className="w-full min-h-screen flex flex-col items-center justify-center gap-[10vh] p-[1vw]">
+        {[1, 2, 3, 4, 5].map((item, index) => (
+          <div key={index} className="outer w-full h-auto lg:h-[60vh] flex flex-col lg:flex-row items-center justify-center relative gap-6">
+            <div className="imageWrapper w-full lg:w-1/2 h-[40vh] lg:h-full object-cover">
+              <div className="img w-full h-full overflow-hidden rounded-xl">
+                <img
+                  data-scroll
+                  data-scroll-speed="-.1"
+                  className="object-cover w-full h-full scale-125"
+                  src="https://framerusercontent.com/images/Isxn4pK721ZR49FRlP7VbzfN6Oc.jpg?scale-down-to=2048"
+                  alt=""
+                />
+              </div>
             </div>
 
-            {/* Info Section */}
-            <div className="col-start-1 col-end-13 md:col-start-7 md:col-end-13 flex flex-col justify-between space-y-4">
-              <div>
-                <h2 className="text-3xl font-semibold">{project.title}</h2>
-                <p className="text-gray-600 text-sm mt-2">{project.description}</p>
-              </div>
+            <div className="info w-full lg:w-1/2 h-full px-[1vw]">
+              <div className="first w-full h-full flex flex-col justify-between">
+                <div className="headingAndNumber w-full h-[20%]">
+                  <div className="flex items-center justify-between">
+                    <h2>root</h2>
+                    <p>{"[" + (index + 1).toString().padStart(2, '0') + "]"}</p>
+                  </div>
+                </div>
 
-              <div className="grid grid-cols-2 gap-y-2 text-sm text-gray-600 mt-4">
-                <div>
-                  <p className="font-medium text-black">Live Site</p>
-                  <p>{project.liveSite}</p>
-                </div>
-                <div>
-                  <p className="font-medium text-black">Industry</p>
-                  <p>{project.industry}</p>
-                </div>
-                <div>
-                  <p className="font-medium text-black">Published</p>
-                  <p>{project.published}</p>
-                </div>
-                <div>
-                  <p className="font-medium text-black">Deliverables</p>
-                  <p>{project.deliverables.join(", ")}</p>
+                <div className="threeDivision w-full h-auto lg:h-[20%] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+                  <div className="one w-full lg:w-[33.3%] uppercase flex justify-between flex-col">
+                    <div>
+                      <p>Live site</p>
+                      <h4>Infrawavesolution.com</h4>
+                    </div>
+                    <div>
+                      <h4>view project</h4>
+                    </div>
+                  </div>
+
+                  <div className="two w-full lg:w-[20.3%] uppercase flex justify-between flex-col">
+                    <div>
+                      <p>Industry</p>
+                      <h4>Healthcare</h4>
+                    </div>
+                    <div>
+                      <p>Published</p>
+                      <h4>©2024</h4>
+                    </div>
+                  </div>
+
+                  <div className="three w-full lg:w-[33.3%] uppercase flex justify-between flex-col items-start lg:items-end">
+                    <div>
+                      <p>Deliverables</p>
+                      <h4>WEB DESIGN</h4>
+                      <h4>WEB DESIGN</h4>
+                      <h4>WEB DESIGN</h4>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <button className="text-black font-medium underline mt-4">
-                VIEW PROJECT
-              </button>
             </div>
           </div>
         ))}
       </div>
+
       <div className="w-full h-[20vh]"></div>
       <Footer />
     </Layout>

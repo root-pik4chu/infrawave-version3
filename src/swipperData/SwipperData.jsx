@@ -83,7 +83,7 @@ const SwipperData = () => {
           >
             {cardData.map((card, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white p-4 rounded-xl shadow-md h-full grid grid-rows-[auto_1fr] py-[3vw] text-start">
+                <div className="bg-white p-4 rounded-xl shadow-md h-full grid grid-rows-2 py-[3vw] text-start">
                   <h2 className="text-lg font-semibold lowercase leading-tight line-clamp-2">
                     {card.title}
                   </h2>

@@ -23,7 +23,7 @@ body{
 }
 @font-face {
   font-family: smallHeading;
-  src: url("../font/SPACEGROTESK-VARIABLEFONT_WGHT.TTF");
+  src: url("../font/GILROY-MEDIUM.TTF");
 }
 
 h1,button,p{
@@ -41,7 +41,8 @@ h3{
 }
 h4{
   font-family: smallHeading;
-  font-size: 1.2vw;
+  font-size: .8vw;
+  font-weight: 600;
 }
 h2{
   font-family: heading;
@@ -50,9 +51,10 @@ h2{
 }
 p{
   font-family: smallHeading;
-  font-size: 0.82vw;
+  font-size: 0.72vw;
   /* font-size: 1.2vw; */
   line-height: 1.1vw;
+  color: #262626;
 }
 
 
@@ -116,5 +118,12 @@ p{
   p{
     font-family: smallHeading;
     font-size: 4vw;
+  line-height: 4.1vw;
+
+  }
+  h4{
+    font-family: smallHeading;
+    font-size: 5vw;
+    font-weight: 600;
   }
 }
