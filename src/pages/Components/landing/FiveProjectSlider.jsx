@@ -68,7 +68,7 @@ const FiveProjectSlider = () => {
   return (
     <>
      <div
-        className="w-full h-[400vh]  text-white"
+        className="w-full h-[400vh]  text-white "
         // style={{
         //   backgroundImage:
         //     "url('https://www.lumina-design.co/static/media/i_project_bg.9a00241e79d94cfd91eb.png')",
@@ -76,12 +76,13 @@ const FiveProjectSlider = () => {
         //   backgroundPosition: "center",
         // }}
       >
+       
         <div className="w-full h-[20vh]"></div>
 
         {/* Container that gets pinned */}
         <div
           ref={containerRef}
-          className="w-full h-[80vh] overflow-hidden z-[9999]"
+          className="w-full h-[90vh] overflow-hidden z-[9999]"
         >
           {/* Row of projects that moves horizontally */}
           <div ref={sliderRef} className="flex gap-8 h-full p-8">
@@ -91,7 +92,7 @@ const FiveProjectSlider = () => {
                 style={{backgroundColor: item.color}}
                 key={`project-${index}`}
                   ref={addProjectRef}
-                  className="project w-[27vw] h-[60vh] border-zinc-900/10 flex-shrink-0 flex items-center justify-center flex-col rounded-4xl shadow-lg border-1  transform z-[100] p-[1vw] "
+                  className="project w-[25vw] h-[60vh] border-zinc-900/10 flex-shrink-0 flex items-center justify-center flex-col rounded-4xl shadow-lg border-1  transform z-[100] p-[1vw] "
                 >
                   <div className="w-full h-[60%]">
                     <img

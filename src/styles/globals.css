@@ -19,11 +19,12 @@ body{
 
 @font-face {
   font-family: heading;
-  src: url("../font/DIRTYLINE\ 36DAYSOFTYPE\ 2022.OTF");
+  src: url("../font/INTER-REGULAR-SLNT=0.TTF");
+  /* src: url("../font/INTER-BOLD-SLNT=0.TTF"); */
 }
 @font-face {
   font-family: smallHeading;
-  src: url("../font/GILROY-MEDIUM.TTF");
+  src: url("../font/INTER-REGULAR-SLNT=0.TTF");
 }
 
 h1,button,p{
@@ -31,9 +32,10 @@ h1,button,p{
 }
 
 h1{
-  font-size: 8vw;
+  font-size: 7vw;
   font-family: heading;
-  line-height: 7.3vw;
+  line-height: 7vw;
+  /* color:#3838CE; */
 }
 h3{
   font-family: smallHeading;

@@ -7,7 +7,7 @@ export default function WhyUsPage(){
   return (
     <div>
       <div className="w-full h-[90vh] flec items-center justify-between flex-col leading-none">
-        <div className="w-full h-[30vh] grid grid-cols-5 p-[1vw] pt-[5vw]">
+        <div className="w-full h-[35vh] grid grid-cols-5 p-[1vw] pt-[5vw]">
         <h1 className='col-start-1 col-end-5'>why us ???</h1>
          
         </div>

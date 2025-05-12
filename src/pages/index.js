@@ -10,6 +10,7 @@ import Container from "../pages/Components/landing/ServiceSection/Container";
 import Lenis from "@studio-freight/lenis";
 import WhyUsPage from "./Components/landing/WhyUsPage";
 import FlipCardsGrid from "./Components/landing/FAQ/FlipCardsGrid";
+import ScrollingText from "./Components/landing/ScrollingText";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -76,9 +77,10 @@ export default function Home() {
     {/* <FloatingParticles /> */}
       </AnimatePresence>
      <HomePage />
-     <div className="w-full h-[30vh]  bg-zinc-50 px-[1vw] flex items-center"><h1>services</h1></div>
+   
+        <ScrollingText />
      <Container />
-     <div className="w-full h-[32vh]  flex items-end px-[1vw]  "> <h1>projects</h1></div>
+     <div className="w-full h-[12vh] flex items-end px-[1vw]  "> <h1>projects</h1></div>
 
      <FiveProjectSlider />
     <AboutSection />
@@ -90,7 +92,7 @@ export default function Home() {
      <div style={{
       position: "fixed",
       width: "100%",
-      height: "15vw",
+      height: "10vw",
       borderRadius: "12px",
       bottom:0,
       zIndex:9999999

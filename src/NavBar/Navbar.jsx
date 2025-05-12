@@ -23,8 +23,8 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="Navbar fixed top-0  h-[10vh] w-full  text-black px-[1vw] ">
-      <div className="w-full h-full grid grid-cols-5 items-center z-[9999]">
+    <div className="Navbar fixed top-0  h-[10vh] w-full ">
+      <div className="w-full h-full grid grid-cols-5 items-center z-[9999] ">
         {/* Logo */}
         <div className="flex justify-start col-span-1">
           <Link href="/">
@@ -35,11 +35,11 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className="hidden md:grid col-span-4 grid-cols-4">
           {navItems.map((item, index) => (
-            <div key={index} className="flex justify-end">
+            <div key={index} className="flex justify-end text-white">
               <Link 
                 // onClick={handleVisibility}
                 href={item.path}
-                className="text-[0.8vw] font-medium capitalize hover:cursor-pointer mix-blend-difference"
+                className="text-[0.8vw] font-medium capitalize hover:cursor-pointer "
               >
                 {item.name}
               </Link>

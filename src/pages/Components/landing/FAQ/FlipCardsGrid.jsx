@@ -57,7 +57,7 @@ export default function FlipCardsGrid() {
         faq
       </h1>
 
-      <div className="  lg:w-[70%] sm:w-full h-[screen] lg:left-[12%] relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
+      <div className="  lg:w-[70%] sm:w-full h-[screen] lg:left-[12%] relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-[5vw]">
         {cardData.map((card, index) => (
           <div
             key={index}

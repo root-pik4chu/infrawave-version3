@@ -69,7 +69,7 @@ export default function ScrollingText() {
   }, []);
   
   return (
-    <div className="relative w-full h-[35vh] overflow-hidden">
+    <div className="relative w-full h-[45vh] flex items-center overflow-hidden bg-zinc-50">
       <div className="absolute">
         <div ref={slider} className="relative whitespace-nowrap">
           <h5 

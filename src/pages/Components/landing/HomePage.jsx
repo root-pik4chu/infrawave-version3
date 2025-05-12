@@ -112,7 +112,7 @@ const HomePage = () => {
                 
                   <div className="w-full h-[50vh] relative flex ">
                     
-                  <h1 className=" text-black w-[70%] leading-none font-[Heading] text-[5.1vw] ">
+                  <h1 className=" text-black w-[70%] leading-none font-[Heading] text-[5.1vw] capitalize">
                     we turn customer data into{" "}
                     <span className="text-white">margin</span>
                   </h1>
@@ -173,7 +173,7 @@ const HomePage = () => {
                 </div>
 
                 <div className="video h-full w-full object-cover p-[1vw] ">
-                  <video
+                  {/* <video
                     autoPlay
                     loop
                     muted
@@ -184,7 +184,7 @@ const HomePage = () => {
                       src="https://framerusercontent.com/assets/7noJ6ZABGBxwSX8scPjAZOqcOhU.mp4"
                       type="video/mp4"
                     />
-                  </video>
+                  </video> */}
                 </div>
                 <div
                   ref={secondBox}

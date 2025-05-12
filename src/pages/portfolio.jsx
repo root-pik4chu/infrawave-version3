@@ -4,6 +4,8 @@ import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import Footer from './Components/Footer/Footer';
 import { motion } from 'framer-motion';
+import HoverButton from './Components/ButtonStagger/HoverText';
+
 
 const Portfolio = () => {
   useEffect(() => {
@@ -51,11 +53,7 @@ const Portfolio = () => {
           ["webDevelopment","AiMl","BlockChain","uiux"].map((item , index)=>{
             return(
   
-              <motion.button className="px-[1vw] py-[.3vw] bg-black text-white text-[0.9vw] rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg">
-                      <motion.div
-                      
-                      className="flex items-center flex-col w-full h-full relative overflow-hidden top-[-100%]">{item}<span className='inline-block absolute top-[50%]'>{item}</span></motion.div>
-                    </motion.button>
+              <HoverButton text={item} />
             )
           })
         }
@@ -65,7 +63,7 @@ const Portfolio = () => {
 
       <div className="w-full min-h-screen flex flex-col items-center justify-center gap-[10vh] p-[1vw]">
         {[1, 2, 3, 4, 5].map((item, index) => (
-          <div key={index} className="outer w-full h-auto lg:h-[60vh] flex flex-col lg:flex-row items-center justify-center relative gap-6">
+          <div key={index} className="outer w-full h-auto lg:h-[60vh] flex flex-col lg:flex-row items-center justify-between relative gap-6 ">
             <div className="imageWrapper w-full lg:w-1/2 h-[40vh] lg:h-full object-cover">
               <div className="img w-full h-full overflow-hidden rounded-xl">
                 <img
@@ -86,37 +84,45 @@ const Portfolio = () => {
                     <p>{"[" + (index + 1).toString().padStart(2, '0') + "]"}</p>
                   </div>
                 </div>
+                
+                <div className="w-full h-[80%]  flex flex-col items-end justify-end">
+                <div className="threeDivision w-full h-[35%] grid grid-cols-3 grid-rows-6 gap-4 ">
+  {/* Column 1 */}
+  <div className="col-span-1 row-span-2 uppercase flex flex-col justify-between">
+    <div>
+      <p>Live site</p>
+      <h4>Infrawavesolution.com</h4>
+    </div>
+    <div>
+      <h4>view project</h4>
+    </div>
+  </div>
 
-                <div className="threeDivision w-full h-auto lg:h-[20%] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
-                  <div className="one w-full lg:w-[33.3%] uppercase flex justify-between flex-col">
-                    <div>
-                      <p>Live site</p>
-                      <h4>Infrawavesolution.com</h4>
-                    </div>
-                    <div>
-                      <h4>view project</h4>
-                    </div>
-                  </div>
+  {/* Column 2 */}
+  <div className="col-span-1 row-span-2 uppercase flex flex-col justify-between">
+    <div>
+      <p>Industry</p>
+      <h4>Healthcare</h4>
+    </div>
+    <div>
+      <p>Published</p>
+      <h4>©2024</h4>
+    </div>
+  </div>
 
-                  <div className="two w-full lg:w-[20.3%] uppercase flex justify-between flex-col">
-                    <div>
-                      <p>Industry</p>
-                      <h4>Healthcare</h4>
-                    </div>
-                    <div>
-                      <p>Published</p>
-                      <h4>©2024</h4>
-                    </div>
-                  </div>
-
-                  <div className="three w-full lg:w-[33.3%] uppercase flex justify-between flex-col items-start lg:items-end">
-                    <div>
-                      <p>Deliverables</p>
-                      <h4>WEB DESIGN</h4>
-                      <h4>WEB DESIGN</h4>
-                      <h4>WEB DESIGN</h4>
-                    </div>
-                  </div>
+  {/* Column 3 */}
+  <div className="col-span-1 row-span-6 uppercase flex flex-col justify-start items-start lg:items-end">
+    <p>tech stack</p>
+    <h4>WEB DESIGN</h4>
+    <h4>WEB DESIGN</h4>
+    <h4>WEB DESIGN</h4>
+    <h4>WEB DESIGN</h4>
+    <h4>WEB DESIGN</h4>
+  </div>
+</div>
+<div className="text-justify">
+  <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore illum fugiat aut maxime, eaque blanditiis voluptatum consequuntur, magni, reprehenderit sed perferendis sit cumque esse corporis aliquid. Tenetur, fuga quasi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore illum fugiat aut</h4>
+</div>
                 </div>
               </div>
             </div>

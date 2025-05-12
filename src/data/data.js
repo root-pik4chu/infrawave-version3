@@ -32,7 +32,8 @@
 
 export const projects = [
   {
-     color: "#da2700",
+    //  color: "#da2700",
+    color: "#dadada",
 
     // color: "#6666cc",
     Name: "Web Development",
@@ -40,9 +41,9 @@ export const projects = [
     img: "https://images.unsplash.com/photo-1707836885248-2b0e3cb0c76e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    color: "#f32c00",
+    // color: "#f32c00",
 
-    // color: "#66ccaa",
+    color: "#eeeeee",
     Name: "AI & Machine Learning",
     Desc: "Designing and deploying intelligent systems using data-driven models and machine learning algorithms. Applying machine learning for predictive analytics, data classification, and automation. Working with technologies such as Python, TensorFlow, and PyTorch to solve complex problems with data.",
     img: "https://images.unsplash.com/photo-1677691824188-3e266886cb27?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -65,7 +66,7 @@ export const projects = [
   },
   {
     color: "#ff6341",
-
+// 
     // color: "#9966cc",
     Name: "cloud computing",
     Desc: "Implementing strategies to protect systems and networks from cyber threats, vulnerabilities, and attacks. Specializing in penetration testing, risk assessments, and cryptographic protocols to ensure data integrity and security. Focusing on threat detection, prevention, and incident response.",
