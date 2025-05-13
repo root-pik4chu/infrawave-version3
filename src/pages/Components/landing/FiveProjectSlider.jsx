@@ -35,7 +35,7 @@ const FiveProjectSlider = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 20%",
+        start: "top 10%",
         end: "+=300%",
         pin: true,
         scrub: 1,
@@ -68,7 +68,7 @@ const FiveProjectSlider = () => {
   return (
     <>
      <div
-        className="w-full h-[400vh]  text-white "
+        className="w-full h-[400vh]  bg-zinc-50 text-white"
         // style={{
         //   backgroundImage:
         //     "url('https://www.lumina-design.co/static/media/i_project_bg.9a00241e79d94cfd91eb.png')",
@@ -77,13 +77,14 @@ const FiveProjectSlider = () => {
         // }}
       >
        
-        <div className="w-full h-[20vh]"></div>
+        {/* <div className="w-full h-[10vh]"></div> */}
 
         {/* Container that gets pinned */}
         <div
           ref={containerRef}
-          className="w-full h-[90vh] overflow-hidden z-[9999]"
+          className="w-full h-[100vh] overflow-hidden z-[9999]"
         >
+           <div className="w-full h-[14vh] flex items-end px-[1vw]  text-black "> <h1>projects</h1></div>
           {/* Row of projects that moves horizontally */}
           <div ref={sliderRef} className="flex gap-8 h-full p-8">
             {projects.map((item, index) => {

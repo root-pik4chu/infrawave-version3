@@ -52,7 +52,7 @@ export default function FlipCardsGrid() {
   };
 
   return (
-    <div className=" w-full h-[120vh] px-[1vw]  mx-auto flex justify-center flex-col">
+    <div className=" w-full h-[150vh] px-[1vw]  mx-auto flex justify-center flex-col bg-zinc-50">
       <h1 className="text-3xl mb-8 lg:w-[70%] sm:w-full ">
         faq
       </h1>
@@ -78,12 +78,12 @@ export default function FlipCardsGrid() {
               "
               >
                 {/* card content */}
-                <h2 className="text-black text-2xl">{card.question}</h2>
+                <h2 className="text-black text-2xl font-semibold">{card.question}</h2>
               </Card>
 
               {/* Back of Card */}
               <Card
-                className="absolute w-full h-full backface-hidden p-6  bg-zinc-100 rotate-y-180 
+                className="absolute w-full h-full backface-hidden p-6  bg-zinc-200 rotate-y-180 
                shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
               >
                 <p className="text-black ">{card.answer}</p>

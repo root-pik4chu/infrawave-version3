@@ -75,42 +75,30 @@ const HomePage = () => {
     setKey(router.route);
   }, [router.route]);
   // useEffect(() => {}, []);
-
+// bg-[#FF4E27] 
   return (
     <div>
       <div className="w-[100%] h-[230vh] bg-[#FF4E27] ">
-        {/* <Lines /> -------------------------------------- */}
+        {/* <Lines /> --------------------------------------
         <div className=" top-0 left-0 w-full h-full z-[1] pointer-events-none px-[1vw] absolute ">
         <div className="flex w-full h-full justify-between ">
           {Array(6)
             .fill(0)
             .map((_, i) => (
-              <div key={i} className="w-px bg-white/50 h-full" />
+              <div key={i} className="w-px bg-black/20 h-full" />
             ))}
         </div>
-      </div>
+      </div> */}
       {/* -------------------------------------------- */}
         <div className="w-full h-full overflow-hidden">
           {/* Top section */}
           <div className="w-full h-[85vh]">
-            <div className="w-full h-full flex items-srart justify-between flex-col px-[1vw]  ">
+            <div className="w-full h-full flex items-end justify-end flex-col px-[1vw]  ">
               {/* pt-[27vw] */}
               <div className="w-full ">
-                <div className="w-full h-[25vh] pt-[2vw]">
-                  {/* <h1 className="pt-[2vw]" style={{fontSize:"18.5vw", color: "fff"}}>INfrawave</h1> */}
-                  {/* <GridDistortion
-                    key={key}
-                    imageSrc="./Frame 99.svg"
-                    grid={20}
-                    mouse={0.1}
-                    strength={0.15}
-                    relaxation={0.9}
-                    className="custom-class"
-                  /> */}
-              
-                </div>
                 
-                  <div className="w-full h-[50vh] relative flex ">
+                
+                  <div className="w-full h-[30vh]  relative flex ">
                     
                   <h1 className=" text-black w-[70%] leading-none font-[Heading] text-[5.1vw] capitalize">
                     we turn customer data into{" "}
@@ -173,7 +161,7 @@ const HomePage = () => {
                 </div>
 
                 <div className="video h-full w-full object-cover p-[1vw] ">
-                  {/* <video
+                  <video
                     autoPlay
                     loop
                     muted
@@ -184,7 +172,7 @@ const HomePage = () => {
                       src="https://framerusercontent.com/assets/7noJ6ZABGBxwSX8scPjAZOqcOhU.mp4"
                       type="video/mp4"
                     />
-                  </video> */}
+                  </video>
                 </div>
                 <div
                   ref={secondBox}

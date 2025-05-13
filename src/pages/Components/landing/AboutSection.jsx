@@ -6,7 +6,7 @@ import CountUp from "../count/CountUp";
 
 export default function AboutSection() {
   return (
-    <div className="w-full h-[80vh] relative">
+    <div className="w-full h-[80vh] relative bg-zinc-50">
       <div className="w-full h-[90%] ">
         <div className="w-full h-full">
           <h1 className="px-[1vw]">About us</h1>

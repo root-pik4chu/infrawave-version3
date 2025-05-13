@@ -15,10 +15,10 @@ export default function Container() {
     <main className="relative w-full">
       
       {/* Desktop Layout */}
-      <div className="hidden md:block md:h-[250vh]">
+      <div className="hidden md:block md:h-[250vh] bg-zinc-50">
    
         <div ref={container}>
-        <div className="w-full h-[25vh] sticky top-[2vh] bg-zinc-50 px-[1vw] flex items-center"><h1>services</h1></div>
+       
           {projects.map((project, i) => {
             const targetScale = 1 - ((projects.length - i) * 0.01);
             const rangeStart = i * 0.1;
