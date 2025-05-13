@@ -49,7 +49,7 @@ export const projects = [
     img: "https://images.unsplash.com/photo-1677691824188-3e266886cb27?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    color: "#ff390e",
+    color: "#dadada",
 
     // color: "#cc6666",
     Name: "Blockchain",
@@ -57,7 +57,7 @@ export const projects = [
     img: "https://images.unsplash.com/photo-1609921205586-7e8a57516512?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    color: "#ff4e27",
+    color: "#eeeeee",
 
     // color: "#cc9966",
     Name: "UI/UX Design",
@@ -65,7 +65,7 @@ export const projects = [
     img: "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHVpdXh8ZW58MHx8MHx8fDA%3D"
   },
   {
-    color: "#ff6341",
+    color: "#dadada",
 // 
     // color: "#9966cc",
     Name: "cloud computing",
@@ -73,7 +73,7 @@ export const projects = [
     img: "https://images.unsplash.com/photo-1707836885248-2b0e3cb0c76e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    color: "#ff785a",
+    color: "#eeeeee",
 
     // color: "#66cccc",
     Name: "Cybersecurity",

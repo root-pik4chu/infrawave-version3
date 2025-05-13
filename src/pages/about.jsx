@@ -71,8 +71,10 @@ const About = () => {
               })}
             </div>
           </div>
-
+          
+          {/* <div className="w-full h-screen">
           <ScrollCube />
+          </div> */}
         </div>
      
     </Layout>

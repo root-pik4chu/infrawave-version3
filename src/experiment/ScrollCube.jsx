@@ -2,7 +2,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Text, Box } from '@react-three/drei';
-import { useScroll, useSpring, animated } from '@react-spring/three';
 
 // Main component to be used in your Next.js application
 const ScrollCube = () => {
@@ -108,6 +107,7 @@ const AnimatedCube = ({ scrollY }) => {
 
   return (
     <group ref={cubeRef}>
+      {/* Cube Box */}
       <Box args={[2, 2, 2]} castShadow>
         <meshStandardMaterial attach="material-0" color="#4285F4" transparent opacity={0.8} />
         <meshStandardMaterial attach="material-1" color="#DB4437" transparent opacity={0.8} />
@@ -115,74 +115,93 @@ const AnimatedCube = ({ scrollY }) => {
         <meshStandardMaterial attach="material-3" color="#0F9D58" transparent opacity={0.8} />
         <meshStandardMaterial attach="material-4" color="#9C27B0" transparent opacity={0.8} />
         <meshStandardMaterial attach="material-5" color="#3F51B5" transparent opacity={0.8} />
-        
-        {/* Render text on each face */}
+      </Box>
+
+      {/* Create separate text elements outside the Box to avoid clipping/z-fighting issues */}
+      
+      {/* Front face (+Z) */}
+      <group position={[0, 0, 1.01]}>
         <Text
-          position={[0, 0, 1.01]}
-          rotation={[0, 0, 0]}
           fontSize={0.2}
           color="white"
           anchorX="center"
           anchorY="middle"
+          renderOrder={1}
+          depthTest={false}
         >
           {faceTexts[0]}
         </Text>
-        
+      </group>
+      
+      {/* Back face (-Z) */}
+      <group position={[0, 0, -1.01]} rotation={[0, Math.PI, 0]}>
         <Text
-          position={[0, 0, -1.01]}
-          rotation={[0, Math.PI, 0]}
           fontSize={0.2}
           color="white"
           anchorX="center"
           anchorY="middle"
+          renderOrder={1}
+          depthTest={false}
         >
           {faceTexts[1]}
         </Text>
-        
+      </group>
+      
+      {/* Top face (+Y) */}
+      <group position={[0, 1.01, 0]} rotation={[-Math.PI/2, 0, 0]}>
         <Text
-          position={[0, 1.01, 0]}
-          rotation={[Math.PI / 2, 0, 0]}
           fontSize={0.2}
           color="white"
           anchorX="center"
           anchorY="middle"
+          renderOrder={1}
+          depthTest={false}
         >
           {faceTexts[2]}
         </Text>
-        
+      </group>
+      
+      {/* Bottom face (-Y) */}
+      <group position={[0, -1.01, 0]} rotation={[Math.PI/2, 0, 0]}>
         <Text
-          position={[0, -1.01, 0]}
-          rotation={[-Math.PI / 2, 0, 0]}
           fontSize={0.2}
           color="white"
           anchorX="center"
           anchorY="middle"
+          renderOrder={1}
+          depthTest={false}
         >
           {faceTexts[3]}
         </Text>
-        
+      </group>
+      
+      {/* Right face (+X) */}
+      <group position={[1.01, 0, 0]} rotation={[0, -Math.PI/2, 0]}>
         <Text
-          position={[1.01, 0, 0]}
-          rotation={[0, Math.PI / 2, 0]}
           fontSize={0.2}
           color="white"
           anchorX="center"
           anchorY="middle"
+          renderOrder={1}
+          depthTest={false}
         >
           {faceTexts[4]}
         </Text>
-        
+      </group>
+      
+      {/* Left face (-X) */}
+      <group position={[-1.01, 0, 0]} rotation={[0, Math.PI/2, 0]}>
         <Text
-          position={[-1.01, 0, 0]}
-          rotation={[0, -Math.PI / 2, 0]}
           fontSize={0.2}
           color="white"
           anchorX="center"
           anchorY="middle"
+          renderOrder={1}
+          depthTest={false}
         >
           {faceTexts[5]}
         </Text>
-      </Box>
+      </group>
     </group>
   );
 };

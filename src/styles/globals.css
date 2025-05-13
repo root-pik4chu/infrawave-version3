@@ -43,9 +43,10 @@ h3{
 }
 h4{
   font-family: smallHeading;
-  font-size: .8vw;
+  font-size: .9vw;
   font-weight: 600;
 }
+
 h2{
   font-family: heading;
   font-size: 2vw;
@@ -53,7 +54,7 @@ h2{
 }
 p{
   font-family: smallHeading;
-  font-size: .8vw;
+  font-size: .9vw;
   /* font-size: 1.2vw; */
   line-height: 1.1vw;
   color: #262626;
