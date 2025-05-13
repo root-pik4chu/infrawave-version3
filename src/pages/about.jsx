@@ -7,7 +7,7 @@ import SplitWrapper from "../a_SpliTextAnimationCodgrid/splitWrapper";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { projects } from "../data/data";
-// import ScrollCube from "../experiment/ScrollCube";
+
 const About = () => {
   const container = useRef(null);
   const staggerOffset = 5 * 70; // 5 is length of cards 
@@ -72,9 +72,7 @@ const About = () => {
             </div>
           </div>
           
-          {/* <div className="w-full h-screen">
-          <ScrollCube />
-          </div> */}
+         
         </div>
      
     </Layout>
